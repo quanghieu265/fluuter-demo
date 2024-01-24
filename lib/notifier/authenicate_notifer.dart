@@ -21,7 +21,8 @@ class AuthenticateState extends AutoDisposeAsyncNotifier<AuthenticateModel> {
   Future<AuthenticateModel> build() async {
     final authService = FirebaseAuth.instance;
 
-    // final response = await get(Uri.https('boredapi.com', '/api/activity'));
+    // final response = await get(Uri.https('boredapi.com', '/api/activity'),
+    //     headers: requestHeaders);
     // final json = jsonDecode(response.body) as Map<String, dynamic>;
     // return AuthenticateModel.fromJson(json);
     final currentUser = authService.currentUser;
